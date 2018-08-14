@@ -18,7 +18,9 @@ const mapDispatchToProps = (dispatch, props) => {
   bindActionCreators({ setFilter, clearFilter }, dispatch);
 };
 
-export default connect(
+const ConnectedFilterList = connect(
   mapStateToProps,
   mapDispatchToProps
 )(FilterList);
+
+export default ConnectedFilterList;
