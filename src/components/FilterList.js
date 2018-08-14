@@ -5,7 +5,12 @@ const FilterList = ({ categories, setFilter, clearFilter }) => (
   <span>
     {categories.map((category, index) => (
       <span key={index}>
-        <Filter name={category} onClick={setFilter} />
+        <Filter
+          name={category}
+          onClick={() => {
+            setFilter(category);
+          }}
+        />
         {" - "}
       </span>
     ))}

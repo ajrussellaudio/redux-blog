@@ -6,17 +6,17 @@ import FilterList from "../components/FilterList";
 import { setFilter, clearFilter } from "../actions";
 
 const mapStateToProps = (state, props) => {
-  return state.props.reduce((acc, post) => {
+  const categories = state.posts.reduce((acc, post) => {
     if (!acc.includes(post.category)) {
       return [...acc, post.category];
     }
     return acc;
   }, []);
+  return { categories };
 };
 
-const mapDispatchToProps = (dispatch, props) => {
+const mapDispatchToProps = (dispatch, props) =>
   bindActionCreators({ setFilter, clearFilter }, dispatch);
-};
 
 const ConnectedFilterList = connect(
   mapStateToProps,

@@ -1,6 +1,10 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
+import App from "./components/App";
+
 import { createStore } from "redux";
 import appReducer from "./reducers";
-
 import { createUser, createPost } from "./actions";
 
 let store = createStore(appReducer);
@@ -28,3 +32,5 @@ store.dispatch(
     category: "reviews"
   })
 );
+
+ReactDOM.render(<App store={store} />, document.getElementById("root"));
