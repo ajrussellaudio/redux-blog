@@ -11,7 +11,7 @@ const Post = ({ user, title, text, category, created, updated }) => (
       <User {...user} />
     </i>
     <br />
-    (Created at: <Timestamp data={created} />, Updated at:{" "}
+    Posted in {category} (Created at: <Timestamp data={created} />, Updated at:{" "}
     <Timestamp data={updated} />)
   </span>
 );
