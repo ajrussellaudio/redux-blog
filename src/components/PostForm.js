@@ -12,6 +12,12 @@ const TextInput = props => {
   );
 };
 
+const initialState = {
+  title: "",
+  text: "",
+  category: ""
+};
+
 class PostForm extends React.Component {
   constructor(props) {
     super(props);
@@ -28,7 +34,7 @@ class PostForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.onSubmit("alan", this.state);
+    this.props.createPost("alan", this.state);
   }
 
   render() {
