@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 
 import ConnectedPostList from "../containers/ConnectedPostList";
 import ConnectedFilterList from "../containers/ConnectedFilterList";
+import PostForm from "./PostForm";
 
 const App = ({ store }) => (
   <Provider store={store}>
@@ -14,6 +15,7 @@ const App = ({ store }) => (
       <div>
         <ConnectedPostList />
       </div>
+      <PostForm />
     </div>
   </Provider>
 );
